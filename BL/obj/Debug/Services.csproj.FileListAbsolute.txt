@@ -1,0 +1,4 @@
+C:\Work\NodePath\BL\bin\Debug\BL.dll
+C:\Work\NodePath\BL\bin\Debug\BL.pdb
+C:\Work\NodePath\BL\obj\Debug\BL.dll
+C:\Work\NodePath\BL\obj\Debug\BL.pdb
