@@ -1,0 +1,14 @@
+C:\Work\NodePath\API\bin\API.dll.config
+C:\Work\NodePath\API\bin\API.dll
+C:\Work\NodePath\API\bin\API.pdb
+C:\Work\NodePath\API\bin\Newtonsoft.Json.dll
+C:\Work\NodePath\API\bin\System.Net.Http.Formatting.dll
+C:\Work\NodePath\API\bin\System.Web.Http.dll
+C:\Work\NodePath\API\bin\System.Web.Http.WebHost.dll
+C:\Work\NodePath\API\bin\Newtonsoft.Json.xml
+C:\Work\NodePath\API\bin\System.Net.Http.Formatting.xml
+C:\Work\NodePath\API\bin\System.Web.Http.xml
+C:\Work\NodePath\API\bin\System.Web.Http.WebHost.xml
+C:\Work\NodePath\API\obj\Debug\API.csprojResolveAssemblyReference.cache
+C:\Work\NodePath\API\obj\Debug\API.dll
+C:\Work\NodePath\API\obj\Debug\API.pdb

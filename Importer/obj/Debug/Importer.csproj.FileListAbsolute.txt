@@ -1,0 +1,5 @@
+C:\Work\NodePath\Importer\bin\Debug\Importer.exe.config
+C:\Work\NodePath\Importer\bin\Debug\Importer.exe
+C:\Work\NodePath\Importer\bin\Debug\Importer.pdb
+C:\Work\NodePath\Importer\obj\Debug\Importer.exe
+C:\Work\NodePath\Importer\obj\Debug\Importer.pdb

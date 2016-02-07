@@ -1,0 +1,4 @@
+C:\Work\NodePath\Core\bin\Debug\Core.dll
+C:\Work\NodePath\Core\bin\Debug\Core.pdb
+C:\Work\NodePath\Core\obj\Debug\Core.dll
+C:\Work\NodePath\Core\obj\Debug\Core.pdb
