@@ -2,61 +2,33 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http.Dependencies;
+using Castle.MicroKernel;
+using Castle.MicroKernel.Lifestyle;
 
 internal class WindsorDependencyScope : IDependencyScope
 {
-    private readonly IDependencyScope scope;
-    private readonly Action<object> release;
-    private readonly List<object> instances;
+    private readonly IKernel kernel;
+ 
+    private readonly IDisposable disposable;
 
-    public WindsorDependencyScope(IDependencyScope scope, Action<object> release)
+	public WindsorDependencyScope(IKernel kernel)
     {
-        if (scope == null)
-        {
-            throw new ArgumentNullException("scope");
-        }
-
-        if (release == null)
-        {
-            throw new ArgumentNullException("release");
-        }
-
-        this.scope = scope;
-        this.release = release;
-        this.instances = new List<object>();
+        this.kernel = kernel;
+        disposable = kernel.BeginScope();
     }
-
-    public object GetService(Type t)
+ 
+    public object GetService(Type type)
     {
-        object service = this.scope.GetService(t);
-        this.AddToScope(service);
-
-        return service;
+        return kernel.HasComponent(type) ? kernel.Resolve(type) : null;
     }
-
-    public IEnumerable<object> GetServices(Type t)
+ 
+    public IEnumerable<object> GetServices(Type type)
     {
-        var services = this.scope.GetServices(t);
-        this.AddToScope(services);
-
-        return services;
+        return kernel.ResolveAll(type).Cast<object>();
     }
-
+ 
     public void Dispose()
     {
-        foreach (object instance in this.instances)
-        {
-            this.release(instance);
-        }
-            
-        this.instances.Clear();
-    }
-
-    private void AddToScope(params object[] services)
-    {
-        if (services.Any())
-        {
-            this.instances.AddRange(services);
-        }
+        disposable.Dispose();
     }
 }

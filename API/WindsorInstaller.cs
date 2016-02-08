@@ -17,7 +17,7 @@ namespace API
 		public void Install(IWindsorContainer container, IConfigurationStore store)
 		{
 			container
-				.Register(Classes.FromThisAssembly().BasedOn<ApiController>());
+				.Register(Classes.FromThisAssembly().BasedOn<ApiController>().LifestyleScoped());
 			container
 				.Register(Component.For<IRepository>().ImplementedBy<Repository>().LifestyleTransient());
 		}

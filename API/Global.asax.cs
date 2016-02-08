@@ -23,8 +23,7 @@ namespace API
         {
 			GlobalConfiguration.Configure(WebApiConfig.Register);
 			GlobalConfiguration.Configuration.DependencyResolver =
-				new WindsorDependencyResolver(this.container);
-
+				new WindsorDependencyResolver(container.Kernel);
         }
 
 		public override void Dispose()

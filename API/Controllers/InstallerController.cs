@@ -25,7 +25,6 @@ namespace API.Controllers
 		public IHttpActionResult Save(Vertex[] vertices)
 		{
 			var errors = new List<string>();
-			HttpRequestMessage response = new HttpRequestMessage();
 			try
 			{
 				foreach(var v in vertices)
@@ -37,10 +36,6 @@ namespace API.Controllers
 							transaction.Commit();
 						}
 					}
-					//foreach(var e in v.Edges)
-					//{
-					//	_dbSession.Save(e);
-					//}
 				}
 				return Ok();
 			}
