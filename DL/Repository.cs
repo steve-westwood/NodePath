@@ -15,6 +15,8 @@ namespace DL
 	{
 		private static ISessionFactory _sessionFactory;
 
+		public Repository() { }
+
 		private static ISessionFactory SessionFactory
 		{
 			get
@@ -31,8 +33,8 @@ namespace DL
 			_sessionFactory = Fluently.Configure()
 				.Database(MsSqlConfiguration.MsSql2008
 				.ConnectionString(
-					@"Server=(local);initial catalog=xxxxx;
-					user=xxxxx;password=xxxxx;") // Modify your ConnectionString
+					@"Server=WORK-LAPTOP\SQL;initial catalog=NodePath;
+					user=sa;password=sqladmin;") // Modify your ConnectionString
 					.ShowSql()
 				)
 				.Mappings(m =>

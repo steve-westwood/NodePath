@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1510.2205\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -50,8 +56,32 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\API\API.csproj">
+      <Project>{5738ab28-4182-4467-a90d-5bc162fbcf01}</Project>
+      <Name>API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\Services.csproj">
+      <Project>{a6d8b0fd-d4ab-4646-afa0-352f4c8d6fd2}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{199fa8a2-47d4-44e0-8c90-2db455c4d95a}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DL\DL.csproj">
+      <Project>{ffa24048-80d5-4557-b571-41346725c8fe}</Project>
+      <Name>DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Importer\Importer.csproj">
+      <Project>{f7f0d103-4b3b-4162-9a06-03f535a06180}</Project>
+      <Name>Importer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

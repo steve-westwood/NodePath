@@ -7,7 +7,7 @@ using NHibernate;
 
 namespace DL
 {
-	interface IRepository
+	public interface IRepository
 	{
 		ISession OpenSession();
 	}

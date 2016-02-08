@@ -13,11 +13,14 @@ namespace DL.Mappings
 		public VertexMap()
 		{
 			Table("[dbo].[Vertices]");
-			Id(x => x.ID);
+			Id(x => x.ID)
+				.GeneratedBy
+				.Assigned()
+				.Column("ID");
 			Map(x => x.Name);
 			HasMany(x => x.Edges)
-				.Table("[dbo].[Edges]")
-				.KeyColumn("OriginID");
+				.KeyColumn("OriginID")
+				.Cascade.All().Inverse();
 		}
 	}
 }

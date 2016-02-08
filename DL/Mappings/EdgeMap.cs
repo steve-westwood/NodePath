@@ -16,8 +16,6 @@ namespace DL.Mappings
 			CompositeId()
 				.KeyProperty(x => x.OriginID)
 				.KeyProperty(x => x.DestinationID);
-			Map(x => x.OriginID);
-			Map(x => x.DestinationID);
 		}
 	}
 }
