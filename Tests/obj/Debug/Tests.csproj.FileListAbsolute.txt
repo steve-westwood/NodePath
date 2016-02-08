@@ -36,3 +36,13 @@ C:\Work\NodePath\Tests\bin\Debug\Castle.Windsor.dll
 C:\Work\NodePath\Tests\bin\Debug\Castle.Core.dll
 C:\Work\NodePath\Tests\bin\Debug\Castle.Windsor.xml
 C:\Work\NodePath\Tests\bin\Debug\Castle.Core.xml
+C:\Work\NodePath\Tests\bin\Debug\XmlData\amazon.xml
+C:\Work\NodePath\Tests\bin\Debug\XmlData\apple.xml
+C:\Work\NodePath\Tests\bin\Debug\XmlData\ebay.xml
+C:\Work\NodePath\Tests\bin\Debug\XmlData\facebook.xml
+C:\Work\NodePath\Tests\bin\Debug\XmlData\google.xml
+C:\Work\NodePath\Tests\bin\Debug\XmlData\ibm.xml
+C:\Work\NodePath\Tests\bin\Debug\XmlData\intel.xml
+C:\Work\NodePath\Tests\bin\Debug\XmlData\microsoft.xml
+C:\Work\NodePath\Tests\bin\Debug\XmlData\paypal.xml
+C:\Work\NodePath\Tests\bin\Debug\XmlData\yahoo.xml
