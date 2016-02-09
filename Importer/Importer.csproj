@@ -54,7 +54,9 @@
     <Compile Include="Services\IFormatter.cs" />
     <Compile Include="Services\IImporter.cs" />
     <Compile Include="Services\ImporterService.cs" />
+    <Compile Include="Services\IPathSetter.cs" />
     <Compile Include="Services\IReader.cs" />
+    <Compile Include="Services\LocalDirectoryService.cs" />
     <Compile Include="Services\TextStreamReader.cs" />
     <Compile Include="WindsorInstaller.cs" />
   </ItemGroup>

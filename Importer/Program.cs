@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
+using Castle.Windsor.Installer;
 using Core;
 using Importer.Services;
 
@@ -16,9 +17,7 @@ namespace Importer
 		static void Main(string[] args)
 		{
 			// Registering
-			var container = new WindsorContainer();
-			container.Register(Component.For<IImporter>().ImplementedBy<ImporterService>().LifestyleTransient());
-			container.Register(Component.For<IFormatter>().ImplementedBy<FormatterService>().LifestyleTransient());
+			var container = new WindsorContainer().Install(FromAssembly.This());
 			// Resolving
 			var importer = container.Resolve<IImporter>();
 			var formatter = container.Resolve<IFormatter>();

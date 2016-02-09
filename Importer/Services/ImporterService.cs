@@ -11,17 +11,18 @@ namespace Importer.Services
 	{
 		private string _localPath { get; set; }
 		private List<FileInfo> _files = new List<FileInfo>();
+		private IPathSetter _pathSetter;
 
-		public ImporterService() 
+		public ImporterService(IPathSetter pathSetter) 
 		{
-			this.SetBaseDirectory();
+			_pathSetter = pathSetter;
+			this.SetDirectory();
 			this.GetFilesFromDirectory();
 		}
 
-		private void SetBaseDirectory()
+		private void SetDirectory()
 		{
-			_localPath = AppDomain.CurrentDomain.BaseDirectory;
-			_localPath += "XmlData\\";
+			_localPath = _pathSetter.ReturnPath();
 		}
 
 		private void GetFilesFromDirectory()

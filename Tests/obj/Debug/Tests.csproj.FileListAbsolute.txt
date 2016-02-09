@@ -46,3 +46,7 @@ C:\Work\NodePath\Tests\bin\Debug\XmlData\intel.xml
 C:\Work\NodePath\Tests\bin\Debug\XmlData\microsoft.xml
 C:\Work\NodePath\Tests\bin\Debug\XmlData\paypal.xml
 C:\Work\NodePath\Tests\bin\Debug\XmlData\yahoo.xml
+C:\Work\NodePath\Tests\bin\Debug\ImporterTests\XmlData\amazon.xml
+C:\Work\NodePath\Tests\bin\Debug\ImporterTests\XmlData\ibm.xml
+C:\Work\NodePath\Tests\bin\Debug\ImporterTests\XmlData\paypal.xml
+C:\Work\NodePath\Tests\bin\Debug\ImporterTests\XmlData\NonXmlFile.txt
