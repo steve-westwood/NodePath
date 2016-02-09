@@ -12,5 +12,7 @@ namespace Services
 		void SaveVertices(Vertex[] vertices);
 
 		Vertex[] GetVertices();
+
+		int[] FindShortestPath(int start, int finish);
 	}
 }

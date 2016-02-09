@@ -4,27 +4,26 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Core;
 using Services;
 
 namespace API.Controllers
 {
-    public class FrontEndController : ApiController
+    public class LogicController : ApiController
     {
 		private ILogicService _service;
 
-		public FrontEndController(ILogicService service)
+		public LogicController(ILogicService service)
 		{
 			_service = service;
 		}
 
 		[HttpGet]
-		[Route("frontend/get")]
-		public IHttpActionResult Get()
+		[Route("logic/findshortestpath/{start}/{end}")]
+		public IHttpActionResult Save(int start, int end)
 		{
 			try
 			{
-				var data = _service.GetVertices();
+				var data = _service.FindShortestPath(start, end);
 				return Ok(data);
 			}
 			catch (Exception ex)

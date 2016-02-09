@@ -62,5 +62,27 @@ namespace Services
 			}
 			return vertices;
 		}
+
+		public int[] FindShortestPath(int start, int finish)
+		{
+			var path = new List<int>();
+			var vertices = GetVertices();
+			var dist = 1;
+
+			Graph g = new Graph();
+			foreach (var vertex in vertices)
+			{
+				var edges = new Dictionary<int, int>();
+				foreach(var edge in vertex.Edges){
+					edges.Add(edge.DestinationID, dist);
+				}
+				g.add_vertex(vertex.ID, edges);
+			}
+			path.Add(start);
+			g.shortest_path(start, finish).ForEach(x => path.Add(x));
+			path.Add(finish);
+
+			return path.ToArray();
+		}
 	}
 }
