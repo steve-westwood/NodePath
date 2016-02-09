@@ -20,3 +20,7 @@ C:\Work\NodePath\Importer\bin\Debug\XmlData\intel.xml
 C:\Work\NodePath\Importer\bin\Debug\XmlData\microsoft.xml
 C:\Work\NodePath\Importer\bin\Debug\XmlData\paypal.xml
 C:\Work\NodePath\Importer\bin\Debug\XmlData\yahoo.xml
+C:\Work\NodePath\Importer\bin\Debug\Newtonsoft.Json.dll
+C:\Work\NodePath\Importer\bin\Debug\System.Net.Http.Formatting.dll
+C:\Work\NodePath\Importer\bin\Debug\Newtonsoft.Json.xml
+C:\Work\NodePath\Importer\bin\Debug\System.Net.Http.Formatting.xml

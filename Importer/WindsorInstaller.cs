@@ -17,6 +17,7 @@ namespace Importer
 			container.Register(Component.For<IImporter>().ImplementedBy<ImporterService>().LifestyleTransient());
 			container.Register(Component.For<IFormatter>().ImplementedBy<FormatterService>().LifestyleTransient());
 			container.Register(Component.For<IPathSetter>().ImplementedBy<LocalDirectoryService>().LifestyleTransient());
+			container.Register(Component.For<IExporter>().ImplementedBy<ApiService>().LifestyleTransient());
 		}
 	}
 }
