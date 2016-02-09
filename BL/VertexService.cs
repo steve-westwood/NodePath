@@ -19,16 +19,9 @@ namespace Services
 
 		public void SaveVertices(Vertex[] vertices)
 		{
+			DeleteAllVertices();
 			using (ISession dbSession = _repository.OpenSession())
 			{
-				// delete all vertices
-				using (var transaction = dbSession.BeginTransaction())
-				{
-					dbSession.Delete("from Vertex v");
-					dbSession.Flush();
-					transaction.Commit();
-				}
-
 				foreach (var v in vertices)
 				{
 					using (var transaction = dbSession.BeginTransaction())
@@ -38,7 +31,36 @@ namespace Services
 					}
 				}
 			}
-
 		}
-    }
+
+		public void DeleteAllVertices()
+		{
+			using (ISession dbSession = _repository.OpenSession())
+			{
+				using (var transaction = dbSession.BeginTransaction())
+				{
+					dbSession.Delete("from Vertex v");
+					dbSession.Flush();
+					transaction.Commit();
+				}
+			}
+		}
+
+
+		public Vertex[] GetVertices()
+		{
+			var vertices = new Vertex[] { };
+			using (ISession dbSession = _repository.OpenSession())
+			{
+				using (var transaction = dbSession.BeginTransaction())
+				{
+					vertices = dbSession.CreateCriteria<Vertex>("v")
+									.SetFetchMode("v.Edges", FetchMode.Join)
+									.List<Vertex>().ToArray();
+					transaction.Commit();
+				}
+			}
+			return vertices;
+		}
+	}
 }

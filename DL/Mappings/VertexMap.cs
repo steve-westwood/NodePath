@@ -20,7 +20,7 @@ namespace DL.Mappings
 			Map(x => x.Name);
 			HasMany(x => x.Edges)
 				.KeyColumn("OriginID")
-				.Cascade.All().Inverse();
+				.Cascade.All().Inverse().AsBag().Not.LazyLoad();
 		}
 	}
 }
