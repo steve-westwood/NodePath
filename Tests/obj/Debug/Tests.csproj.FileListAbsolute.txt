@@ -50,3 +50,4 @@ C:\Work\NodePath\Tests\bin\Debug\ImporterTests\XmlData\amazon.xml
 C:\Work\NodePath\Tests\bin\Debug\ImporterTests\XmlData\ibm.xml
 C:\Work\NodePath\Tests\bin\Debug\ImporterTests\XmlData\paypal.xml
 C:\Work\NodePath\Tests\bin\Debug\ImporterTests\XmlData\NonXmlFile.txt
+C:\Work\NodePath\Tests\bin\Debug\Tests.dll.config
