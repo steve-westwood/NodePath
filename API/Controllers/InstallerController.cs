@@ -5,38 +5,27 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Core;
-using DL;
+using Services;
 using NHibernate;
 
 namespace API.Controllers
 {
     public class InstallerController : ApiController
     {
-		private IRepository _repository;
-		private ISession _dbSession;
+		private ILogicService _service;
 
-		public InstallerController(IRepository repository)
+		public InstallerController(ILogicService service)
 		{
-			_repository = repository;
+			_service = service;
 		}
 
 		[HttpPost]
 		[Route("installer/save")]
 		public IHttpActionResult Save(Vertex[] vertices)
 		{
-			var errors = new List<string>();
 			try
 			{
-				foreach(var v in vertices)
-				{
-					using (_dbSession = _repository.OpenSession()) {
-						using (ITransaction transaction = _dbSession.BeginTransaction())
-						{
-							var newVertex = _dbSession.Save(v);
-							transaction.Commit();
-						}
-					}
-				}
+				_service.SaveVertices(vertices);
 				return Ok();
 			}
 			catch (Exception ex)

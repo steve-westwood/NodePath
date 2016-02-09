@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core;
 
-namespace BL
+namespace Services
 {
-    public class Class1
-    {
-    }
+	public interface ILogicService
+	{
+		void SaveVertices(Vertex[] vertices);
+	}
 }

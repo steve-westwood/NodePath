@@ -3,4 +3,3 @@ C:\Work\NodePath\UI\bin\UI.dll
 C:\Work\NodePath\UI\bin\UI.pdb
 C:\Work\NodePath\UI\obj\Debug\UI.dll
 C:\Work\NodePath\UI\obj\Debug\UI.pdb
-C:\Work\NodePath\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache

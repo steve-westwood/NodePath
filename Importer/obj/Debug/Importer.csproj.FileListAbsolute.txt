@@ -11,7 +11,6 @@ C:\Work\NodePath\Importer\bin\Debug\Core.pdb
 C:\Work\NodePath\Importer\bin\Debug\Castle.Core.xml
 C:\Work\NodePath\Importer\bin\Debug\Castle.Windsor.xml
 C:\Work\NodePath\Importer\bin\Debug\XmlData\amazon.xml
-C:\Work\NodePath\Importer\bin\Debug\XmlData\apple.xml
 C:\Work\NodePath\Importer\bin\Debug\XmlData\ebay.xml
 C:\Work\NodePath\Importer\bin\Debug\XmlData\facebook.xml
 C:\Work\NodePath\Importer\bin\Debug\XmlData\google.xml
@@ -24,3 +23,4 @@ C:\Work\NodePath\Importer\bin\Debug\Newtonsoft.Json.dll
 C:\Work\NodePath\Importer\bin\Debug\System.Net.Http.Formatting.dll
 C:\Work\NodePath\Importer\bin\Debug\Newtonsoft.Json.xml
 C:\Work\NodePath\Importer\bin\Debug\System.Net.Http.Formatting.xml
+C:\Work\NodePath\Importer\bin\Debug\XmlData\apple.xml
