@@ -2,78 +2,96 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data;
+using System.Threading.Tasks;
+using Core;
 
 namespace Services
 {
-
 	public class Graph
 	{
-		Dictionary<int, Dictionary<int, int>> vertices = new Dictionary<int, Dictionary<int, int>>();
-
-		public void add_vertex(int name, Dictionary<int, int> edges)
+		private Vertex[] _nodes { get; set; }
+		public Graph(Vertex[] nodes)
 		{
-			vertices[name] = edges;
+			_nodes = nodes;
 		}
 
-		public List<int> shortest_path(int start, int finish)
+		public int[] getDirections(int sourceVertex, int destinationVertex) 
 		{
-			var previous = new Dictionary<int, int>();
-			var distances = new Dictionary<int, int>();
-			var nodes = new List<int>();
+			//Initialization.
+			Dictionary<int, int> nextVertexMap = new Dictionary<int, int>();
+			int currentVertex = sourceVertex;
 
-			List<int> path = null;
+			//Queue
+			List<int> queue = new List<int>();
+			queue.Add(currentVertex);
 
-			foreach (var vertex in vertices)
-			{
-				if (vertex.Key == start)
-				{
-					distances[vertex.Key] = 0;
+			/*
+			 * The set of visited nodes doesn't have to be a Map, and, since order
+			 * is not important, an ordered collection is not needed. HashSet is 
+			 * fast for add and lookup, if configured properly.
+			 */
+			List<int> visitedVertexs = new List<int>();
+			visitedVertexs.Add(currentVertex);
+
+			//Search.
+			while (queue.Count > 0) {
+				currentVertex = queue[queue.Count - 1]; 
+				queue.Remove(currentVertex);
+				if (currentVertex == destinationVertex) {
+					//Look up of next node instead of previous.
+					if (nextVertexMap.ContainsKey(currentVertex))
+					{
+						nextVertexMap[currentVertex] = currentVertex;
+					}
+					else
+					{
+						nextVertexMap.Add(currentVertex, currentVertex);
+					}
+					break;
+				} else {
+					Vertex currentVertexObj = null;
+					foreach (var nextVertex in _nodes)
+					{
+						if (nextVertex.ID == currentVertex)
+						{
+							currentVertexObj = nextVertex;
+							break;
+						}
+					}
+					foreach (var edge in currentVertexObj.Edges)
+					{
+						if (!visitedVertexs.Contains(edge.DestinationID))
+						{
+							queue.Add(edge.DestinationID);
+							visitedVertexs.Add(edge.DestinationID);
+
+							//Look up of next node instead of previous.
+							if (nextVertexMap.ContainsKey(currentVertex))
+							{
+								nextVertexMap[currentVertex] = edge.DestinationID;
+							}
+							else
+							{
+								nextVertexMap.Add(currentVertex, edge.DestinationID);
+							}
+						}
+					}
 				}
-				else
-				{
-					distances[vertex.Key] = int.MaxValue;
-				}
-
-				nodes.Add(vertex.Key);
 			}
 
-			while (nodes.Count != 0)
-			{
-				nodes.Sort((x, y) => distances[x] - distances[y]);
-
-				var smallest = nodes[0];
-				nodes.Remove(smallest);
-
-				if (smallest == finish)
-				{
-					path = new List<int>();
-					while (previous.ContainsKey(smallest))
-					{
-						path.Add(smallest);
-						smallest = previous[smallest];
-					}
-
-					break;
-				}
-
-				if (distances[smallest] == int.MaxValue)
-				{
-					break;
-				}
-
-				foreach (var neighbor in vertices[smallest])
-				{
-					var alt = distances[smallest] + neighbor.Value;
-					if (alt < distances[neighbor.Key])
-					{
-						distances[neighbor.Key] = alt;
-						previous[neighbor.Key] = smallest;
-					}
-				}
+			//If all nodes are explored and the destination node hasn't been found.
+			if (currentVertex != destinationVertex) {
+				throw new Exception("Destination node not found");
 			}
 
-			return path;
+			//Reconstruct path. No need to reverse.
+			List<int> directions = new List<int>();
+			foreach(KeyValuePair<int, int> map in nextVertexMap)
+			{
+				directions.Add(map.Key);
+			}
+
+			return directions.ToArray();
 		}
 	}
 }

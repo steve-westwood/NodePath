@@ -48,8 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ILogicService.cs" />
     <Compile Include="Graph.cs" />
+    <Compile Include="ILogicService.cs" />
     <Compile Include="VertexService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
