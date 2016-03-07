@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;
@@ -12,7 +13,7 @@ namespace Tests.ImporterTests
 	{
 		private Importer.Services.ImporterService _importer;
 		private Importer.Services.FormatterService _formatter;
-		private Mock<Importer.Services.IPathSetter> _mockPathSetter = new Mock<Importer.Services.IPathSetter>();
+		private readonly Mock<Importer.Services.IPathSetter> _mockPathSetter = new Mock<Importer.Services.IPathSetter>();
 
 		[SetUp]
 		public void SetUp()
@@ -35,12 +36,8 @@ namespace Tests.ImporterTests
 		public void Ensure_importer_returns_the_expected_files_from_given_folder()
 		{
 			var files = _importer.GetFiles();
-			var fileNames = new List<string>();
-			foreach (var file in files)
-			{
-				fileNames.Add(file.Name);
-			}
-			bool allFilesFound = fileNames.Contains("amazon.xml")
+			var fileNames = files.Select(file => file.Name).ToList();
+		    bool allFilesFound = fileNames.Contains("amazon.xml")
 				&& fileNames.Contains("ibm.xml")
 				&& fileNames.Contains("paypal.xml");
 
@@ -50,35 +47,38 @@ namespace Tests.ImporterTests
 		[Test]
 		public void Ensure_formatter_returns_expected_objects_from_given_xml_files()
 		{
-			var expectedData = new List<Core.Vertex>();
-			// in alphabetical order
-			//amazon
-			expectedData.Add(new Core.Vertex
-			{
-				ID = 9,
-				Name = "Amazon",
-				Edges = new Core.Edge[] { new Core.Edge { OriginID = 9, DestinationID = 10 } }
-			});
-			//ibm
-			expectedData.Add(new Core.Vertex
-			{
-				ID = 4,
-				Name = "IBM",
-				Edges = new Core.Edge[] {}
-			});
-			//paypal
-			expectedData.Add(new Core.Vertex
-			{
-				ID = 5,
-				Name = "Paypal",
-				Edges = new Core.Edge[] { 
-					new Core.Edge { OriginID = 5, DestinationID = 2 },
-					new Core.Edge { OriginID = 5, DestinationID = 8 },
-					new Core.Edge { OriginID = 5, DestinationID = 5 },
-					new Core.Edge { OriginID = 5, DestinationID = 7 }
-				}
-			});
-			var files = _importer.GetFiles();
+		    var expectedData = new List<Core.Vertex>
+		    {
+		        new Core.Vertex
+		        {
+		            ID = 9,
+		            Name = "Amazon",
+		            Edges = new Core.Edge[] {new Core.Edge {OriginID = 9, DestinationID = 10}}
+		        },
+		        new Core.Vertex
+		        {
+		            ID = 4,
+		            Name = "IBM",
+		            Edges = new Core.Edge[] {}
+		        },
+		        new Core.Vertex
+		        {
+		            ID = 5,
+		            Name = "Paypal",
+		            Edges = new Core.Edge[]
+		            {
+		                new Core.Edge {OriginID = 5, DestinationID = 2},
+		                new Core.Edge {OriginID = 5, DestinationID = 8},
+		                new Core.Edge {OriginID = 5, DestinationID = 5},
+		                new Core.Edge {OriginID = 5, DestinationID = 7}
+		            }
+		        }
+		    };
+		    // in alphabetical order
+		    //amazon
+		    //ibm
+		    //paypal
+		    var files = _importer.GetFiles();
 			_formatter.InputData(files.ToArray());
 			Core.Vertex[] formattedData = _formatter.GetFormattedData();
 			var expectedJson = JsonConvert.SerializeObject((expectedData.ToArray()));

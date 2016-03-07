@@ -12,3 +12,17 @@ C:\Work\NodePath\DL\bin\Debug\NHibernate.xml
 C:\Work\NodePath\DL\obj\Debug\DL.csprojResolveAssemblyReference.cache
 C:\Work\NodePath\DL\bin\Debug\Core.dll
 C:\Work\NodePath\DL\bin\Debug\Core.pdb
+C:\Work\MessAround\NodePath\DL\bin\Debug\DL.dll
+C:\Work\MessAround\NodePath\DL\bin\Debug\DL.pdb
+C:\Work\MessAround\NodePath\DL\bin\Debug\Core.dll
+C:\Work\MessAround\NodePath\DL\bin\Debug\FluentNHibernate.dll
+C:\Work\MessAround\NodePath\DL\bin\Debug\Iesi.Collections.dll
+C:\Work\MessAround\NodePath\DL\bin\Debug\NHibernate.dll
+C:\Work\MessAround\NodePath\DL\bin\Debug\Core.pdb
+C:\Work\MessAround\NodePath\DL\bin\Debug\FluentNHibernate.pdb
+C:\Work\MessAround\NodePath\DL\bin\Debug\FluentNHibernate.xml
+C:\Work\MessAround\NodePath\DL\bin\Debug\Iesi.Collections.xml
+C:\Work\MessAround\NodePath\DL\bin\Debug\NHibernate.xml
+C:\Work\MessAround\NodePath\DL\obj\Debug\DL.csprojResolveAssemblyReference.cache
+C:\Work\MessAround\NodePath\DL\obj\Debug\DL.dll
+C:\Work\MessAround\NodePath\DL\obj\Debug\DL.pdb

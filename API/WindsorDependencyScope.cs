@@ -7,28 +7,28 @@ using Castle.MicroKernel.Lifestyle;
 
 internal class WindsorDependencyScope : IDependencyScope
 {
-    private readonly IKernel kernel;
+    private readonly IKernel _kernel;
  
-    private readonly IDisposable disposable;
+    private readonly IDisposable _disposable;
 
 	public WindsorDependencyScope(IKernel kernel)
     {
-        this.kernel = kernel;
-        disposable = kernel.BeginScope();
+        this._kernel = kernel;
+        _disposable = kernel.BeginScope();
     }
  
     public object GetService(Type type)
     {
-        return kernel.HasComponent(type) ? kernel.Resolve(type) : null;
+        return _kernel.HasComponent(type) ? _kernel.Resolve(type) : null;
     }
  
     public IEnumerable<object> GetServices(Type type)
     {
-        return kernel.ResolveAll(type).Cast<object>();
+        return _kernel.ResolveAll(type).Cast<object>();
     }
  
     public void Dispose()
     {
-        disposable.Dispose();
+        _disposable.Dispose();
     }
 }

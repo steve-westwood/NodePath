@@ -6,13 +6,12 @@ using System.Net.Http;
 using System.Web.Http;
 using Core;
 using Services;
-using NHibernate;
 
 namespace API.Controllers
 {
     public class InstallerController : ApiController
     {
-		private ILogicService _service;
+		private readonly ILogicService _service;
 
 		public InstallerController(ILogicService service)
 		{

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Core;
 using DL;
 using NHibernate;
@@ -49,7 +45,7 @@ namespace Services
 
 		public Vertex[] GetVertices()
 		{
-			var vertices = new Vertex[] { };
+			Vertex[] vertices;
 			using (ISession dbSession = _repository.OpenSession())
 			{
 				using (var transaction = dbSession.BeginTransaction())

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Core;
 
 namespace Services
@@ -22,18 +19,16 @@ namespace Services
 			int currentVertex = sourceVertex;
 
 			//Queue
-			List<int> queue = new List<int>();
-			queue.Add(currentVertex);
+		    List<int> queue = new List<int> {currentVertex};
 
-			/*
+		    /*
 			 * The set of visited nodes doesn't have to be a Map, and, since order
 			 * is not important, an ordered collection is not needed. HashSet is 
 			 * fast for add and lookup, if configured properly.
 			 */
-			List<int> visitedVertexs = new List<int>();
-			visitedVertexs.Add(currentVertex);
+		    List<int> visitedVertexs = new List<int> {currentVertex};
 
-			//Search.
+		    //Search.
 			while (queue.Count > 0) {
 				currentVertex = queue[queue.Count - 1]; 
 				queue.Remove(currentVertex);

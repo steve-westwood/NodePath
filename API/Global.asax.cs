@@ -12,23 +12,23 @@ namespace API
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
-		private readonly IWindsorContainer container;
+		private readonly IWindsorContainer _container;
 
 		public WebApiApplication()
 		{
-			this.container = new WindsorContainer().Install(FromAssembly.This());
+			this._container = new WindsorContainer().Install(FromAssembly.This());
 		}
 
         protected void Application_Start()
         {
 			GlobalConfiguration.Configure(WebApiConfig.Register);
 			GlobalConfiguration.Configuration.DependencyResolver =
-				new WindsorDependencyResolver(container.Kernel);
+				new WindsorDependencyResolver(_container.Kernel);
         }
 
 		public override void Dispose()
 		{
-			this.container.Dispose();
+			this._container.Dispose();
 			base.Dispose();
 		}
     }

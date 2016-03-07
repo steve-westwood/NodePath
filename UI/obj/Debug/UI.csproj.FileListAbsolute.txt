@@ -3,3 +3,9 @@ C:\Work\NodePath\UI\bin\UI.dll
 C:\Work\NodePath\UI\bin\UI.pdb
 C:\Work\NodePath\UI\obj\Debug\UI.dll
 C:\Work\NodePath\UI\obj\Debug\UI.pdb
+C:\Work\MessAround\NodePath\UI\bin\UI.dll.config
+C:\Work\MessAround\NodePath\UI\bin\UI.dll
+C:\Work\MessAround\NodePath\UI\bin\UI.pdb
+C:\Work\MessAround\NodePath\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Work\MessAround\NodePath\UI\obj\Debug\UI.dll
+C:\Work\MessAround\NodePath\UI\obj\Debug\UI.pdb
