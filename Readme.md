@@ -1,6 +1,6 @@
 <h1>NodePath</h1>
 
-Application to find the shortest path between to vertices using Breadth First Search algorithm.
+Application to find the shortest path between to vertices in an unweighted undirected graph using Depth First Search algorithm.
 
 <h1>Database </h1>
 
