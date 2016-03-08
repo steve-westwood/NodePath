@@ -32,7 +32,6 @@ C:\Work\NodePath\API\bin\Iesi.Collections.xml
 C:\Work\MessAround\NodePath\API\bin\API.dll.config
 C:\Work\MessAround\NodePath\API\bin\API.dll
 C:\Work\MessAround\NodePath\API\bin\API.pdb
-C:\Work\MessAround\NodePath\API\bin\BL.dll
 C:\Work\MessAround\NodePath\API\bin\Castle.Core.dll
 C:\Work\MessAround\NodePath\API\bin\Castle.Windsor.dll
 C:\Work\MessAround\NodePath\API\bin\Core.dll
@@ -44,7 +43,6 @@ C:\Work\MessAround\NodePath\API\bin\NHibernate.dll
 C:\Work\MessAround\NodePath\API\bin\System.Net.Http.Formatting.dll
 C:\Work\MessAround\NodePath\API\bin\System.Web.Http.dll
 C:\Work\MessAround\NodePath\API\bin\System.Web.Http.WebHost.dll
-C:\Work\MessAround\NodePath\API\bin\BL.pdb
 C:\Work\MessAround\NodePath\API\bin\Core.pdb
 C:\Work\MessAround\NodePath\API\bin\DL.pdb
 C:\Work\MessAround\NodePath\API\bin\Castle.Core.xml
@@ -60,3 +58,5 @@ C:\Work\MessAround\NodePath\API\bin\System.Web.Http.WebHost.xml
 C:\Work\MessAround\NodePath\API\obj\Debug\API.csprojResolveAssemblyReference.cache
 C:\Work\MessAround\NodePath\API\obj\Debug\API.dll
 C:\Work\MessAround\NodePath\API\obj\Debug\API.pdb
+C:\Work\MessAround\NodePath\API\bin\Services.dll
+C:\Work\MessAround\NodePath\API\bin\Services.pdb

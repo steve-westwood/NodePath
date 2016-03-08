@@ -14,8 +14,8 @@ C:\Work\NodePath\BL\bin\Debug\Iesi.Collections.xml
 C:\Work\NodePath\BL\bin\Debug\NHibernate.xml
 C:\Work\NodePath\BL\bin\Debug\Core.pdb
 C:\Work\NodePath\BL\obj\Debug\Services.csprojResolveAssemblyReference.cache
-C:\Work\MessAround\NodePath\BL\bin\Debug\BL.dll
-C:\Work\MessAround\NodePath\BL\bin\Debug\BL.pdb
+C:\Work\MessAround\NodePath\BL\bin\Debug\Services.dll
+C:\Work\MessAround\NodePath\BL\bin\Debug\Services.pdb
 C:\Work\MessAround\NodePath\BL\bin\Debug\Core.dll
 C:\Work\MessAround\NodePath\BL\bin\Debug\DL.dll
 C:\Work\MessAround\NodePath\BL\bin\Debug\FluentNHibernate.dll
@@ -28,5 +28,5 @@ C:\Work\MessAround\NodePath\BL\bin\Debug\FluentNHibernate.xml
 C:\Work\MessAround\NodePath\BL\bin\Debug\Iesi.Collections.xml
 C:\Work\MessAround\NodePath\BL\bin\Debug\NHibernate.xml
 C:\Work\MessAround\NodePath\BL\obj\Debug\Services.csprojResolveAssemblyReference.cache
-C:\Work\MessAround\NodePath\BL\obj\Debug\BL.dll
-C:\Work\MessAround\NodePath\BL\obj\Debug\BL.pdb
+C:\Work\MessAround\NodePath\BL\obj\Debug\Services.dll
+C:\Work\MessAround\NodePath\BL\obj\Debug\Services.pdb

@@ -63,8 +63,11 @@ namespace Services
 		{
 			var vertices = GetVertices();
 
-			Graph g = new Graph(vertices);
-			var path = g.getDirections(start, finish);
+			//Graph g = new Graph(vertices);
+			//var path = g.GetDirections(start, finish);
+
+            DepthFirstSearch dfs = new DepthFirstSearch(vertices);
+		    var path = dfs.GetShortestPath(start, finish);
 
 			return path.ToArray();
 		}

@@ -69,11 +69,9 @@ C:\Work\MessAround\NodePath\Tests\bin\Debug\Tests.dll.config
 C:\Work\MessAround\NodePath\Tests\bin\Debug\Tests.dll
 C:\Work\MessAround\NodePath\Tests\bin\Debug\Tests.pdb
 C:\Work\MessAround\NodePath\Tests\bin\Debug\API.dll
-C:\Work\MessAround\NodePath\Tests\bin\Debug\BL.dll
 C:\Work\MessAround\NodePath\Tests\bin\Debug\Core.dll
 C:\Work\MessAround\NodePath\Tests\bin\Debug\DL.dll
 C:\Work\MessAround\NodePath\Tests\bin\Debug\Importer.exe
-C:\Work\MessAround\NodePath\Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Work\MessAround\NodePath\Tests\bin\Debug\Moq.dll
 C:\Work\MessAround\NodePath\Tests\bin\Debug\Newtonsoft.Json.dll
 C:\Work\MessAround\NodePath\Tests\bin\Debug\nunit.framework.dll
@@ -86,7 +84,6 @@ C:\Work\MessAround\NodePath\Tests\bin\Debug\System.Net.Http.Formatting.dll
 C:\Work\MessAround\NodePath\Tests\bin\Debug\Castle.Core.dll
 C:\Work\MessAround\NodePath\Tests\bin\Debug\Iesi.Collections.dll
 C:\Work\MessAround\NodePath\Tests\bin\Debug\API.pdb
-C:\Work\MessAround\NodePath\Tests\bin\Debug\BL.pdb
 C:\Work\MessAround\NodePath\Tests\bin\Debug\Core.pdb
 C:\Work\MessAround\NodePath\Tests\bin\Debug\DL.pdb
 C:\Work\MessAround\NodePath\Tests\bin\Debug\Importer.pdb
@@ -105,3 +102,5 @@ C:\Work\MessAround\NodePath\Tests\bin\Debug\Iesi.Collections.xml
 C:\Work\MessAround\NodePath\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 C:\Work\MessAround\NodePath\Tests\obj\Debug\Tests.dll
 C:\Work\MessAround\NodePath\Tests\obj\Debug\Tests.pdb
+C:\Work\MessAround\NodePath\Tests\bin\Debug\Services.dll
+C:\Work\MessAround\NodePath\Tests\bin\Debug\Services.pdb

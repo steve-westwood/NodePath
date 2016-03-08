@@ -12,7 +12,7 @@ namespace Services
 			_nodes = nodes;
 		}
 
-		public int[] getDirections(int sourceVertex, int destinationVertex) 
+		public int[] GetDirections(int sourceVertex, int destinationVertex) 
 		{
 			//Initialization.
 			Dictionary<int, int> nextVertexMap = new Dictionary<int, int>();
